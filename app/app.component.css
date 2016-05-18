@@ -1,0 +1,156 @@
+header {
+    background: #2c3e50;
+    color: #fff;
+    font-size: 30px;
+        
+    /*FLEX*/
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;        
+}
+header .logo {
+    margin-right: 10px;
+    width: 100%;
+    
+    /*FLEX*/
+    display: flex;
+
+    flex-direction: row;
+    justify-content: space-between;
+}
+header .logo img {
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+}
+header .logo a {
+    display: none;
+}
+header .accesos {
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 10px;
+    
+    /*FLEX*/
+    display: flex;
+    
+    flex-wrap: nowrap;
+    /*align-items: center;*/
+    justify-content: flex-end;
+}
+.contenedor-main {
+    background: green;
+    
+    /*FLEX*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+.contenedor-main .aside-izquierdo {
+    background: #2c3e50;
+    display: none;
+
+    /*FLEX*/
+    flex:0 0 300px;
+}
+.contenedor-main .main {
+    background: #fff;
+    
+    /*FLEX*/
+    flex: 1;
+}
+.contenedor-main .aside-derecho {
+    background: #2c3e50;
+    display: none;
+    
+    /*FLEX*/
+    flex:0 0 300px;
+}
+footer {
+    background: #2c3e50;
+    
+    /*FLEX*/
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;        
+}
+footer .social {
+    min-height: 50px;
+    width: 100%;
+    
+    /*FLEX*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .social a {
+    background: #c0392b;
+    color: #fff;
+    text-align: center;
+    height: 25px;
+    width: 25px;
+    margin-right: 5px;
+}
+footer .social a:hover {
+    background: #E74C3C;
+}
+footer .links {
+    min-height: 50px;
+    
+    /*FLEX*/
+    display: flex;
+    
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+footer .links a {
+    color: #fff;
+    text-align: center;
+    
+    margin-left: 10px;
+    padding-left: 10px;
+}
+footer .links a:hover {
+    font-weight: bold;
+}
+
+@media (min-width: 520px) {
+    footer .social {
+        justify-content: flex-end;
+    }
+    header .logo a {
+        display: block;
+    }    
+}
+
+@media (min-width: 700px) {
+    header .logo {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 900px) {
+    header {
+        flex-direction: row; 
+        flex-wrap: nowrap;
+    }
+    .contenedor-main .aside-izquierdo {
+        display: block;
+    }    
+}
+
+@media (min-width: 1900px) {
+    .contenedor-main .aside-derecho {
+        display: block;
+    }    
+}
