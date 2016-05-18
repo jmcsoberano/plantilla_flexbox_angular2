@@ -1,5 +1,5 @@
 header {
-    background: #2c3e50;
+    background: #2b3643;
     color: #fff;
     font-size: 30px;
         
@@ -12,8 +12,8 @@ header {
     flex-wrap: wrap;        
 }
 header .logo {
-    margin-right: 10px;
     width: 100%;
+    padding: 15px 10px 15px 10px;
     
     /*FLEX*/
     display: flex;
@@ -31,19 +31,35 @@ header .logo a {
 }
 header .accesos {
     width: 100%;
-    margin-bottom: 15px;
-    margin-top: 15px;
-    padding: 10px;
+    padding: 15px 10px 15px 10px;
+    background: #344150;
     
     /*FLEX*/
     display: flex;
     
-    flex-wrap: nowrap;
-    /*align-items: center;*/
+    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: flex-end;
 }
+header .accesos .busqueda {
+    height: 30px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+header .accesos .items {
+    
+    /*FLEX*/
+    display: flex;
+    flex-wrap: wrap;
+    
+    justify-content: flex-end;
+}
+header .accesos .items .item {
+    margin-left: 10px;
+}
 .contenedor-main {
-    background: green;
+    background: white;
     
     /*FLEX*/
     display: flex;
@@ -52,7 +68,7 @@ header .accesos {
     justify-content: center;
 }
 .contenedor-main .aside-izquierdo {
-    background: #2c3e50;
+    background: #344150;
     display: none;
 
     /*FLEX*/
@@ -65,7 +81,7 @@ header .accesos {
     flex: 1;
 }
 .contenedor-main .aside-derecho {
-    background: #2c3e50;
+    background: #21282e;
     display: none;
     
     /*FLEX*/
@@ -125,6 +141,10 @@ footer .links a:hover {
 }
 
 @media (min-width: 520px) {
+    header .accesos {
+        /*FLEX*/
+        flex-direction: row;
+    }    
     footer .social {
         justify-content: flex-end;
     }
@@ -144,6 +164,21 @@ footer .links a:hover {
         flex-direction: row; 
         flex-wrap: nowrap;
     }
+    header .logo {
+        /*FLEX*/
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+    header .logo img {
+        margin-right: 15px;
+    }
+    header .logo a {
+        margin-right: 15px;
+        font-size: 20px;
+    }
+    header .accesos {
+        background: #2b3643;        
+    }   
     .contenedor-main .aside-izquierdo {
         display: block;
     }    
